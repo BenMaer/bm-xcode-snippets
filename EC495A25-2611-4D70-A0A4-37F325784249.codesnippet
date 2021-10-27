@@ -15,22 +15,26 @@ class &lt;#Name#&gt;Flow: NavigationControllerFlow {
     // MARK: - Public Properties
     let rootNavigationController: UINavigationController
     typealias StepType = &lt;#Name#&gt;Step
-
+    
     // MARK: - Initialization
-    init(rootNavigationController: UINavigationController = .init()) {
+    init(appServices: AppServices, rootNavigationController: UINavigationController = .init()) {
+        self.appServices = appServices
         self.rootNavigationController = rootNavigationController
     }
     
     // MARK: - Public Functions
     func navigate(to step: Step) -&gt; FlowContributors {
         return (step as? StepType).map({ navigate(to: $0 )})
-        ?? {
-            assertionFailure("Unhandled step: \(step)")
-            return .none
-        }()
+            ?? {
+                assertionFailure("Unhandled step: \(step)")
+                return .none
+            }()
     }
     
     // MARK: - Private Properties
+    private let appServices: AppServices
+    
+    // MARK: - Private Functions
     private func navigate(to step: StepType) -&gt; FlowContributors {
         switch step {
         }
