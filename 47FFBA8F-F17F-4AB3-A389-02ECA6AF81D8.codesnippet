@@ -22,7 +22,7 @@ class &lt;#ViewModel#&gt; {
     }
     
     // MARK: - Private Properties
-    let appServices: AppServices
+    private let appServices: AppServices
 }
 
 extension &lt;#ViewModel#&gt;: &lt;#ViewModel#&gt;Inputs {
