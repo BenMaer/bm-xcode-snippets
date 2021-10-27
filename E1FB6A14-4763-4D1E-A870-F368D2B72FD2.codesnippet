@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Create RXDataSource Section Model</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension &lt;#Class#&gt; {
+    fileprivate struct SectionModel {
+        typealias Item = &lt;#ViewModel#&gt;.Item 
+        var items: [Item]
+    }
+}
+
+extension &lt;#Class#&gt;.SectionModel: SectionModelType {
+    init(original: Self, items: [Self.Item]) {
+        self = original
+        self.items = items
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E1FB6A14-4763-4D1E-A870-F368D2B72FD2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Generates supporting code for RXDataSource SectionModelType</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create RXDataSource Section Model</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

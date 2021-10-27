@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Decoder Coding Keys and Init</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    private enum CodingKeys: String, CodingKey {
+        case type, data
+    }
+    
+    private enum TypeCodingKeys: String, Decodable, CodingKey {
+        case &lt;#cases#&gt;
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let type = try container.decode(TypeCodingKeys.self, forKey: .type)
+        self = try {
+            switch type {
+            case .&lt;#case1#&gt;:     return .&lt;#case1#&gt;(try container.decode(&lt;#case1class#&gt;.self, forKey: .data))
+            case .&lt;#case2#&gt;:     return .&lt;#case2#&gt;(try container.decode(&lt;#case2class#&gt;.self, forKey: .data))
+            }
+        }()
+    }
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>72BA405D-704F-455A-8AFC-8BB88AE96C05</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Decoder Coding Keys and Init</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Decoder Coding Keys and Init</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Create RxFlow with Step</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class &lt;#Name#&gt;Flow: RootNavigationControllerFlow {
+    // MARK: - Public Properties
+    let rootNavigationController: UINavigationController
+
+    // MARK: - Initialization
+    init(rootNavigationController: UINavigationController = .init()) {
+        self.rootNavigationController = rootNavigationController
+    }
+
+    typealias StepType = &lt;#Name#&gt;Step
+    func navigate(to step: Step) -&gt; FlowContributors {
+        guard let myStep = step as? StepType else {
+            assertionFailure("Unhandled step: \(step)")
+            return .none
+        }
+
+        switch myStep {
+        }
+    }
+}
+
+enum &lt;#Name#&gt;Step: Step {
+    case &lt;#cases#&gt;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EC495A25-2611-4D70-A0A4-37F325784249</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create RxFlow with Step</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create RxFlow with Step</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

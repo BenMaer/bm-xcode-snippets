@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>UIViewController setup viewDidLoad and constraints</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// MARK: - Overloaded Functions
+// MARK: UIViewController
+override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    &lt;#code#&gt;
+    
+    setupConstraints()
+}
+
+// MARK: - Private Functions
+// MARK: Constraints
+private func setupConstraints() {
+    &lt;#view#&gt;.snp.makeConstraints { make in
+        &lt;#code#&gt;
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DA40ADB1-9396-4DF2-9663-706CD15BB994</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>UIViewController setup viewDidLoad and constraints</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIViewController setup viewDidLoad and constraints</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Create View Model Template</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>protocol &lt;#ViewModel#&gt;Inputs {
+}
+
+protocol &lt;#ViewModel#&gt;Outputs {
+}
+
+class &lt;#ViewModel#&gt; {
+    // MARK: - Initialization
+    init(appServices: AppServices) {
+        self.appServices = appServices
+    }
+    
+    // MARK: - Private Properties
+    let appServices: AppServices
+}
+
+extension &lt;#ViewModel#&gt;: &lt;#ViewModel#&gt;Inputs {
+}
+
+extension &lt;#ViewModel#&gt;: &lt;#ViewModel#&gt;Outputs {
+}
+
+protocol &lt;#ViewModel#&gt;Type {
+    var inputs: &lt;#ViewModel#&gt;Inputs { get }
+    var outputs: &lt;#ViewModel#&gt;Outputs { get }
+}
+
+extension &lt;#ViewModel#&gt;: &lt;#ViewModel#&gt;Type {
+    var inputs: &lt;#ViewModel#&gt;Inputs { self }
+    var outputs: &lt;#ViewModel#&gt;Outputs { self }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>47FFBA8F-F17F-4AB3-A389-02ECA6AF81D8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Generates code standard for a view model</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create View Model Template</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
