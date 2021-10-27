@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>import RxFlow
 
-class &lt;#Name#&gt;Flow: RootNavigationControllerFlow {
+class &lt;#Name#&gt;Flow: NavigationControllerFlow {
     // MARK: - Public Properties
     let rootNavigationController: UINavigationController
     typealias StepType = &lt;#Name#&gt;Step
