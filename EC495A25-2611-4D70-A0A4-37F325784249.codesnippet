@@ -3,36 +3,38 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>Create RxFlow with Step</string>
+	<string>Create RxFlow Template</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#Name#&gt;Flow: RootNavigationControllerFlow {
+	<string>import RxFlow
+
+class &lt;#Name#&gt;Flow: RootNavigationControllerFlow {
     // MARK: - Public Properties
     let rootNavigationController: UINavigationController
+    typealias StepType = &lt;#Name#&gt;Step
 
     // MARK: - Initialization
     init(rootNavigationController: UINavigationController = .init()) {
         self.rootNavigationController = rootNavigationController
     }
-
-    typealias StepType = &lt;#Name#&gt;Step
+    
+    // MARK: - Public Functions
     func navigate(to step: Step) -&gt; FlowContributors {
-        guard let myStep = step as? StepType else {
+        return (step as? StepType).map({ navigate(to: $0 )})
+        ?? {
             assertionFailure("Unhandled step: \(step)")
             return .none
-        }
-
-        switch myStep {
+        }()
+    }
+    
+    // MARK: - Private Properties
+    private func navigate(to step: StepType) -&gt; FlowContributors {
+        switch step {
         }
     }
-}
-
-enum &lt;#Name#&gt;Step: Step {
-    case &lt;#cases#&gt;
 }
 </string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -42,9 +44,9 @@ enum &lt;#Name#&gt;Step: Step {
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Create RxFlow with Step</string>
+	<string>Create RxFlow Template</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Create RxFlow with Step</string>
+	<string>Create RxFlow Template</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
