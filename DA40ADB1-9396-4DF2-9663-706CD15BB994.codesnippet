@@ -10,17 +10,20 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>// MARK: - Overloaded Functions
-// MARK: UIViewController
 override func viewDidLoad() {
     super.viewDidLoad()
     
     &lt;#code#&gt;
     
+    setupObservations()
+    
     setupConstraints()
 }
 
 // MARK: - Private Functions
-// MARK: Constraints
+private func setupObservations() {
+}
+
 private func setupConstraints() {
     &lt;#view#&gt;.snp.makeConstraints { make in
         &lt;#code#&gt;
