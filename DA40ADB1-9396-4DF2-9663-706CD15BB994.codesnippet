@@ -15,21 +15,23 @@ override func viewDidLoad() {
     
     &lt;#code#&gt;
     
-    setupObservations()
-    
     setupConstraints()
+    
+    setupObservations()
 }
+
+// MARK: - Private Properties
+private let disposeBag = DisposeBag()
 
 // MARK: - Private Functions
-private func setupObservations() {
-}
-
 private func setupConstraints() {
     &lt;#view#&gt;.snp.makeConstraints { make in
         &lt;#code#&gt;
     }
 }
-</string>
+
+private func setupObservations() {
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DA40ADB1-9396-4DF2-9663-706CD15BB994</string>
 	<key>IDECodeSnippetLanguage</key>

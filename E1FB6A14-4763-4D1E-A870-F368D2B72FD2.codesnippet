@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>Create RXDataSource Section Model</string>
+	<string>Create RXDataSource Section Model template</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>extension &lt;#Class#&gt; {
-    fileprivate struct SectionModel {
-        typealias Item = &lt;#ViewModel#&gt;.Item 
-        var items: [Item]
+    struct &lt;#SectionModel#&gt;: SectionModelType {
+        typealias Item = &lt;#Item#&gt;
+        let items: [Item]
     }
 }
 
-extension &lt;#Class#&gt;.SectionModel: SectionModelType {
-    init(original: Self, items: [Self.Item]) {
+extension &lt;#Class#&gt;.&lt;#SectionModel#&gt; {
+    init(original: Self, items: [Item]) {
         self = original
-        self.items = items
+        self.init(items: items)
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -29,7 +29,7 @@ extension &lt;#Class#&gt;.SectionModel: SectionModelType {
 	<key>IDECodeSnippetSummary</key>
 	<string>Generates supporting code for RXDataSource SectionModelType</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Create RXDataSource Section Model</string>
+	<string>Create RXDataSource Section Model template</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

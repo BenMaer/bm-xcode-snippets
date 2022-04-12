@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Create and setup UICollectionViewCell template</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+import RxSwift
+
+class &lt;#Class#&gt;: UICollectionViewCell, UICollectionViewCellWithIdentifier {
+    // MARK: - Initialization
+    // MARK: UIView
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        //contentView.addSubviews(&lt;#T##views: [UIView]##[UIView]#&gt;)
+        
+        setupConstraints()
+        
+        setupObservations()
+    }
+    
+    // MARK: NSCoding
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Private Properties
+    private let disposeBag = DisposeBag()
+    
+    // MARK: - Private Functions
+    private func setupConstraints() {
+        //&lt;#view#&gt;.snp.makeConstraints { make in
+        //&lt;#code#&gt;
+        //}
+    }
+    
+    private func setupObservations() {
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>99C41341-11B4-4304-A519-82AF5CDAB6F1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create and setup UICollectionViewCell template</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create and setup UICollectionViewCell template</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
