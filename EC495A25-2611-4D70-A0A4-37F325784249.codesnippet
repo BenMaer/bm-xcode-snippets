@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>Create RxFlow Template</string>
+	<string>Create Navigation Controller Flow Template</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>TopLevel</string>
@@ -15,10 +15,11 @@ class &lt;#Name#&gt;Flow: NavigationControllerFlow {
     // MARK: - Public Properties
     let rootNavigationController: UINavigationController
     typealias StepType = &lt;#Name#&gt;Step
+    typealias Services = MainAppServicesType
     
     // MARK: - Initialization
-    init(appServices: AppServices, rootNavigationController: UINavigationController = .init()) {
-        self.appServices = appServices
+    init(services: Services, rootNavigationController: UINavigationController = .init()) {
+        self.services = services
         self.rootNavigationController = rootNavigationController
     }
     
@@ -32,7 +33,7 @@ class &lt;#Name#&gt;Flow: NavigationControllerFlow {
     }
     
     // MARK: - Private Properties
-    private let appServices: AppServices
+    private let services: Services
     
     // MARK: - Private Functions
     private func navigate(to step: StepType) -&gt; FlowContributors {
@@ -48,9 +49,9 @@ class &lt;#Name#&gt;Flow: NavigationControllerFlow {
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Create RxFlow Template</string>
+	<string>Create Navigation Controller Flow Template</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Create RxFlow Template</string>
+	<string>Create Navigation Controller Flow Template</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -16,13 +16,16 @@ protocol &lt;#ViewModel#&gt;Outputs {
 }
 
 class &lt;#ViewModel#&gt; {
+    // MARK: - Public Properties
+    typealias Services = MainAppServicesType
+    
     // MARK: - Initialization
-    init(appServices: AppServices) {
-        self.appServices = appServices
+    init(services: Services) {
+        self.services = services
     }
     
     // MARK: - Private Properties
-    private let appServices: AppServices
+    private let services: Services
 }
 
 extension &lt;#ViewModel#&gt;: &lt;#ViewModel#&gt;Inputs {

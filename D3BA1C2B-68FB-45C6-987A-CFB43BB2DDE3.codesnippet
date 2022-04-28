@@ -3,13 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>UIViewController init with view model template</string>
+	<string>UIViewController class template</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    // MARK: - Public Properties
+	<string>import UIKit
+
+import RxSwift
+
+class &lt;#Name#&gt;ViewController: UIViewController {
+    // MARK: - Public Properties
     typealias ViewModelType = &lt;#Name#&gt;ViewModelType
     
     // MARK: - Initialization
@@ -23,19 +28,44 @@
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Overloaded Functions
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        &lt;#code#&gt;
+        
+        setupConstraints()
+        
+        setupObservations()
+    }
+    
     // MARK: - Private Properties
-    private let viewModel: ViewModelType</string>
+    private let viewModel: ViewModelType
+    
+    private let disposeBag = DisposeBag()
+    
+    // MARK: - Private Functions
+    private func setupConstraints() {
+        &lt;#view#&gt;.snp.makeConstraints { make in
+            &lt;#code#&gt;
+        }
+    }
+    
+    private func setupObservations() {
+    }
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>7941F7AB-2135-426F-B051-E7C847F87143</string>
+	<string>D3BA1C2B-68FB-45C6-987A-CFB43BB2DDE3</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Provides components for a UIViewController who wants to init with a view model.</string>
+	<string>UIViewController class template</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>UIViewController init with view model template</string>
+	<string>UIViewController class template</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
